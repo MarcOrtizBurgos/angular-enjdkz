@@ -10,7 +10,7 @@ import { CartService } from '../cart.service';
   styleUrls: ['./product-details.component.css'],
 })
 export class ProductDetailsComponent implements OnInit {
-  product: User | undefined;
+  user: User | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,9 +25,9 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit() {
     // First get the product id from the current route.
     const routeParams = this.route.snapshot.paramMap;
-    const productIdFromRoute = Number(routeParams.get('productId'));
+    const productIdFromRoute = String(routeParams.get('productId'));
 
     // Find the product that correspond with the id provided in route.
-    this.user = users.find((product) => product.id === productIdFromRoute);
+    this.user = users.find((user) => user.id === productIdFromRoute);
   }
 }
