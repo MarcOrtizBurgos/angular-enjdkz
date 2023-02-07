@@ -1,21 +1,20 @@
-<h2>Products</h2>
-
-<div *ngFor="let product of products">
-  <h3>
-    <a
-      [title]="product.name + ' details'"
-      [routerLink]="['/products', product.id]"
-    >
-      {{ product.name }}
-    </a>
-  </h3>
-  <p *ngIf="product.description">Description: {{ product.description }}</p>
-  <button type="button" (click)="share()">Share</button>
-  <app-product-alerts [product]="product" (notify)="onNotify()">
-  </app-product-alerts>
+<div class="container mt-5">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Cognom</th>
+        <th>Email</th>
+        <th>DNI</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of Users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.surname }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.id }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-<!-- 
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
--->
