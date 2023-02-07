@@ -1,17 +1,17 @@
 import { HttpClient } from '@angular/common/http';
-import { Product } from './products';
+import { User } from './products';
 import { Injectable } from '@angular/core';
 /* . . . */
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  items: Product[] = [];
+  items: User[] = [];
 
   constructor(private http: HttpClient) {}
   /* . . . */
 
-  addToCart(product: Product) {
+  addToCart(product: User) {
     this.items.push(product);
   }
 

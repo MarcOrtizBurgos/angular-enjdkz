@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Product, products } from '../products';
+import { User, users } from '../products';
 import { CartService } from '../cart.service';
 
 @Component({
@@ -10,14 +10,14 @@ import { CartService } from '../cart.service';
   styleUrls: ['./product-details.component.css'],
 })
 export class ProductDetailsComponent implements OnInit {
-  product: Product | undefined;
+  product: User | undefined;
 
   constructor(
     private route: ActivatedRoute,
     private cartService: CartService
   ) {}
 
-  addToCart(product: Product) {
+  addToCart(product: User) {
     this.cartService.addToCart(product);
     window.alert('Your product has been added to the cart!');
   }
@@ -28,8 +28,6 @@ export class ProductDetailsComponent implements OnInit {
     const productIdFromRoute = Number(routeParams.get('productId'));
 
     // Find the product that correspond with the id provided in route.
-    this.product = products.find(
-      (product) => product.id === productIdFromRoute
-    );
+    this.user = users.find((product) => product.id === productIdFromRoute);
   }
 }

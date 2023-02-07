@@ -1,31 +1,54 @@
-export interface Product {
-  id: number;
+export interface User {
   name: string;
-  price: number;
-  description: string;
+  surname: string;
+  email: string;
+  id: string;
 }
 
-export const products = [
+export const users = [
   {
-    id: 1,
-    name: 'Phone XL',
-    price: 799,
-    description: 'A large phone with one of the best screens'
+    name: 'Jhon',
+    surname: 'Doe',
+    email: 'jhon.doe@email.com',
+    id: '4782938L',
   },
   {
-    id: 2,
-    name: 'Phone Mini',
-    price: 699,
-    description: 'A great phone with one of the best cameras'
+    name: 'Alice',
+    surname: 'Combs',
+    email: 'alice.combs@email.com',
+    id: '4749204T',
   },
   {
-    id: 3,
-    name: 'Phone Standard',
-    price: 299,
-    description: ''
-  }
+    name: 'Grace',
+    surname: 'Hawkins',
+    email: 'grace.hawkins@email.com',
+    id: '5671938K',
+  },
+  {
+    name: 'Wayne',
+    surname: 'Stuart',
+    email: 'wayne.stuart@email.com',
+    id: '9022108P',
+  },
+  {
+    name: 'Juan',
+    surname: 'Spence',
+    email: 'juan.spence@email.com',
+    id: '4321165C',
+  },
+  {
+    name: 'Ronan',
+    surname: 'Orozco',
+    email: 'ronan.orozco@email.com',
+    id: '6738145E',
+  },
+  {
+    name: 'Sylvia',
+    surname: 'Vega',
+    email: 'sylvia.vega@email.com',
+    id: '2031145J',
+  },
 ];
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
